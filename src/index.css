@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: Aeonik;
+  src: url("../src/assets/fonts/fonnts.com-Aeonik-Bold.ttf");
+}
+@font-face {
+  font-family: Aeonikreg;
+  src: url("../src/assets/fonts/fonnts.com-Aeonik-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+
+@theme{
+  --font-aeonik: Aeonik, "sans-serif";
+  --font-aeonikreg: Aeonikreg, "sans-serif";
+  --font-montserrat: Montserrat, "sans-serif";
+}
+
+html {
+  scroll-behavior: smooth;
+}
