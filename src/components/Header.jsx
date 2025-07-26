@@ -32,12 +32,12 @@ function Header() {
             <div className='flex space-x-8'>
                 <div>
                     <a href="https://github.com/Garvey17">
-                        <FaGithub />
+                        <FaGithub size={25}/>
                     </a>
                 </div>
                 <div>
                     <a href="https://www.linkedin.com/in/adebola-elisha-77a1a8257">
-                        <FaLinkedin/>
+                        <FaLinkedin size={25}/>
                     </a>
                 </div>
             </div>
