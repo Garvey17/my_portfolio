@@ -5,8 +5,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Services from './components/Services'
 import ContactForm from './components/Contact'
-import StackingScrollCards from './components/CardStack'
-import ScrollRevealCards from './components/CardStack'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -14,11 +13,12 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Hero/>
-      <Services/>
-      <Projects/>
-      <ContactForm/>
+      <Header />
+      <Hero />
+      <Services />
+      <Projects />
+      <ContactForm />
+      <Footer />
     </>
   )
 }

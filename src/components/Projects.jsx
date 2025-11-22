@@ -1,88 +1,113 @@
-import React from "react";
-import cmind from  "../assets/cmindset.png"
-import notes from "../assets/notes.png"
-import ingenious from "../assets/ingenious.png"
-import voult from "../assets/voult.png"
+import React, { useEffect, useRef } from "react";
 import { Globe } from 'lucide-react';
+import { projects } from "../data/projects";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const projects = [
-    {
-      title: "Notes App",
-      description:
-        "A secure Notes App built with the MERN stack featuring user login, signup, and JWT-based authentication. Users can create, edit, and manage their personal notes in a clean, responsive interface with data stored in MongoDB.",
-      tech: ["React", "Tailwind", "MongoDB", "Express js", "Node js", "JWT"],
-      image:notes,
-      link:"https://notes-app-x2.onrender.com/home",
-    },
-    {
-      title: "E-commerce store",
-      description:
-        "A stylish eCommerce fashion store built with the MERN stack, featuring product listings, user authentication, and a fully functional shopping cart for seamless browsing and checkout.",
-      tech: ["Node.js", "Express", "MongoDB", "React", "Tailwind"],
-      image:voult,
-      link:"https://voult-mern-app-x2.onrender.com/",
-    },
-    {
-      title: "Creative Mindset",
-      description:
-        "A sleek and modern website for a design agency built with React, Tailwind CSS, and GSAP, featuring smooth scroll-based animations, responsive layouts, and dynamic transitions that showcase the agency's services, portfolio, and team with an engaging user experience.",
-      tech: ["React", "Gsap", "Tailwind",],
-      image:cmind,
-      link:"https://creativestudios-seven.vercel.app/",
-    },
-    {
-      title: "AI SaaS",
-      description:
-        "A modern AI SaaS onboarding website designed to guide users through features, pricing, and account setup with a clean UI, interactive walkthroughs, and responsive design—built for clarity, conversion, and seamless user engagement.",
-      tech: ["React", "Tailwind", "Mongo DB", "Expresss js", "Node js"],
-      image:ingenious,
-      link:"https://ingeniouspage.netlify.app/",
-    },
-  ];
-  
-  const ProjectsSection = () => {
-    return (
-      <section className="py-16 px-4 bg-white" id="projects">
-        <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-[2rem] sm:text-3xl md:text-5xl lg:text-8xl font-aeonik mb-4">Projects</h2>
- 
-          <p className="text-gray-600 mb-12">
-            A selection of projects that demonstrate my skills across the fullstack.
+gsap.registerPlugin(ScrollTrigger);
+
+const ProjectsSection = () => {
+  const containerRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      ScrollTrigger.matchMedia({
+        // Mobile only
+        "(max-width: 768px)": () => {
+          cardsRef.current.forEach((card, index) => {
+            if (index === cardsRef.current.length - 1) return; // Don't animate the last card
+
+            const nextCard = cardsRef.current[index + 1];
+
+            gsap.to(card, {
+              scale: 0.9,
+              opacity: 0,
+              scrollTrigger: {
+                trigger: card,
+                start: "top 15%", // Adjust based on where you want the stack to start
+                endTrigger: nextCard,
+                end: "top 15%",
+                scrub: true,
+                // markers: true, // Uncomment for debugging
+              },
+            });
+          });
+        },
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const addToRefs = (el) => {
+    if (el && !cardsRef.current.includes(el)) {
+      cardsRef.current.push(el);
+    }
+  };
+
+  return (
+    <section className="py-20 px-4 bg-white" id="projects" ref={containerRef}>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-aeonik mb-6">Selected Work</h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto font-montserrat">
+            A showcase of projects demonstrating full-stack capabilities and attention to detail.
           </p>
-  
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 border-2 border-black rounded-2xl p-6 shadow-sm hover:shadow-lg transition"
-              >
-                <div className="flex  justify-between ">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">
+        </div>
+
+        <div className="grid gap-10 md:grid-cols-2">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              ref={addToRefs}
+              className="group bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-black transition-all duration-300 hover:shadow-xl flex flex-col h-full md:static sticky top-[15vh]"
+            >
+              <div className="relative overflow-hidden aspect-video">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+              </div>
+
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-aeonik font-bold text-gray-900">
                     {project.title}
-                    </h3>
-                    <a href={project.link} className="p-1.5 bg-black text-white flex rounded-2xl text-xs justify-center items-center font-montserrat mb-2" >Website <Globe/></a>
+                  </h3>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    Visit <Globe size={16} />
+                  </a>
                 </div>
-                <div className="">
-                    <img src={project.image} alt="" />
-                </div>
-                <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
+
+                <p className="text-gray-600 mb-6 font-montserrat leading-relaxed flex-grow">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tech.map((techItem, i) => (
                     <span
                       key={i}
-                      className="bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full"
+                      className="bg-gray-200 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
                     >
                       {techItem}
                     </span>
                   ))}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-    );
-  };
-  
-  export default ProjectsSection;
-  
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
