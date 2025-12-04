@@ -2,18 +2,19 @@ import cmind from  "../assets/cmindset.png"
 import notes from "../assets/notes.png"
 import ingenious from "../assets/ingenious.png"
 import voult from "../assets/voult.png"
+import miryoku from "../assets/miryoku.png"
 
 export const projects = [
     {
-      title: "Notes App",
+      title: "Miryoku",
       description:
-        "A secure Notes App built with the MERN stack featuring user login, signup, and JWT-based authentication. Users can create, edit, and manage their personal notes in a clean, responsive interface with data stored in MongoDB.",
-      tech: ["React", "Tailwind", "MongoDB", "Express js", "Node js", "JWT"],
-      image:notes,
-      link:"https://notes-app-x2.onrender.com/home",
+        "A modern social media platform built with Next.js and Supabase featuring secure authentication, real-time updates, and a clean, responsive interface. Users can create posts, participate in comment threads, engage through a voting-based interaction system, and follow others. The app includes an integrated notifications system powered by database triggers and Supabase Realtime, ensuring instant in-app alerts and a smooth, dynamic social experience.",
+      tech: ["Nextjs", "Tailwind", "Supabase", "Framer motion", "Gsap", "Shadcn"],
+      image:miryoku,
+      link:"https://miryoku-social.vercel.app/",
     },
     {
-      title: "E-commerce store",
+      title: "Voult",
       description:
         "A stylish eCommerce fashion store built with the MERN stack, featuring product listings, user authentication, and a fully functional shopping cart for seamless browsing and checkout.",
       tech: ["Node.js", "Express", "MongoDB", "React", "Tailwind"],

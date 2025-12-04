@@ -110,9 +110,12 @@ function Hero() {
 
           <div className='mt-8 flex flex-wrap gap-4'>
             <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>MERN Stack</span>
-            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>React</span>
+            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Nextjs</span>
             <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Node.js</span>
             <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Tailwind</span>
+            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Supabase</span>
+            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Solidity</span>
+            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Python</span>
           </div>
 
           {/* Mobile Download Button */}
