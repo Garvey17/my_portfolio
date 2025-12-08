@@ -5,13 +5,13 @@ const services = [
     title: "Frontend Development",
     icon: <Code className="w-8 h-8 text-blue-600" />,
     description:
-      "Responsive and modern interfaces using React, Tailwind CSS, and cutting-edge design patterns.",
+      "Responsive and modern interfaces using Nextjs, React, GSAP, Framer-motion, Tailwind CSS, and cutting-edge design patterns.",
   },
   {
     title: "Backend Development",
     icon: <Server className="w-8 h-8 text-green-600" />,
     description:
-      "Scalable and secure RESTful APIs and server logic with Node.js, Express, and databases like MongoDB or PostgreSQL.",
+      "Scalable and secure RESTful APIs and server logic with Node.js, Express, and databases like MongoDB or relational like  Supabase(PostgreSQL).",
   },
   {
     title: "Fullstack Solutions",

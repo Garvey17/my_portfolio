@@ -3,15 +3,24 @@ import notes from "../assets/notes.png"
 import ingenious from "../assets/ingenious.png"
 import voult from "../assets/voult.png"
 import miryoku from "../assets/miryoku.png"
+import afraf from "../assets/afraff.png"
 
 export const projects = [
     {
       title: "Miryoku",
       description:
-        "A modern social media platform built with Next.js and Supabase featuring secure authentication, real-time updates, and a clean, responsive interface. Users can create posts, participate in comment threads, engage through a voting-based interaction system, and follow others. The app includes an integrated notifications system powered by database triggers and Supabase Realtime, ensuring instant in-app alerts and a smooth, dynamic social experience.",
+        "A modern social media app built with Next.js and Supabase, featuring secure auth, real-time posts, comments, voting, follows, and instant notifications powered by database triggers and Supabase Realtime — all in a clean, responsive UI",
       tech: ["Nextjs", "Tailwind", "Supabase", "Framer motion", "Gsap", "Shadcn"],
       image:miryoku,
       link:"https://miryoku-social.vercel.app/",
+    },
+    {
+      title: "AF RAFF",
+      description:
+        "A B2B web portal built with Next.js and Supabase for a major cement distributor and contractor. Features secure authentication, real-time order tracking, instant price quotes, bulk order placement, invoice history, delivery scheduling, and credit limit monitoring — all in a fast, responsive interface tailored for construction professionals.",
+      tech: ["Nextjs", "Tailwind", "Supabase", "Node js"],
+      image:afraf,
+      link:"https://raf-app.vercel.app/",
     },
     {
       title: "Voult",
@@ -29,12 +38,5 @@ export const projects = [
       image:cmind,
       link:"https://creativestudios-seven.vercel.app/",
     },
-    {
-      title: "AI SaaS",
-      description:
-        "A modern AI SaaS onboarding website designed to guide users through features, pricing, and account setup with a clean UI, interactive walkthroughs, and responsive design—built for clarity, conversion, and seamless user engagement.",
-      tech: ["React", "Tailwind", "Mongo DB", "Expresss js", "Node js"],
-      image:ingenious,
-      link:"https://ingeniouspage.netlify.app/",
-    },
+    
   ];
