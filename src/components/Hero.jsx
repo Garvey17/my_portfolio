@@ -84,7 +84,7 @@ function Hero() {
       <a
         ref={buttonRef}
         download
-        href='./cv.pdf'
+        href='./resume_adebola.pdf'
         className="hidden lg:flex gap-3 justify-center items-center absolute cursor-pointer top-0 left-0 px-8 py-4 bg-brand-green hover:bg-[#a2e64b] text-black font-montserrat font-bold text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all pointer-events-auto z-40 rounded-full"
       > <FaDownload />
         Download CV
@@ -109,19 +109,16 @@ function Hero() {
           </div>
 
           <div className='mt-8 flex flex-wrap gap-4'>
-            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>MERN Stack</span>
-            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Nextjs</span>
-            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Node.js</span>
-            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Tailwind</span>
-            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Supabase</span>
-            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Solidity</span>
+            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Javascript</span>
+            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Typescript</span>
             <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Python</span>
+            <span className='px-4 py-2 bg-gray-100 rounded-full font-aeonik text-sm border border-gray-200'>Solidity</span> 
           </div>
 
           {/* Mobile Download Button */}
           <a
             download
-            href='./cv.pdf'
+            href='./resume_adebola.pdf'
             className="lg:hidden mt-10 w-full md:w-auto flex gap-3 justify-center items-center px-8 py-4 bg-brand-green text-black font-montserrat font-bold text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all"
           >
             <FaDownload />

@@ -4,8 +4,19 @@ import ingenious from "../assets/ingenious.png"
 import voult from "../assets/voult.png"
 import miryoku from "../assets/miryoku.png"
 import afraf from "../assets/afraff.png"
+import axeon1 from "../assets/axeon1.png"
+
+
 
 export const projects = [
+    {
+      title: "Axeon",
+      description:
+        "A fast browser-based coding environment similar to StackBlitz Built with Next.js (JavaScript) + Monaco Editor and terminal featuring instant preloaded project templates (React, Next.js, Node, etc.), multi-file support, live preview & hot-reloading Integrated local AI coding assistant powered by Ollama",
+      tech: ["Nextjs", "Prisma", "Mongodb", "Monaco"],
+      image:axeon1,
+      link:"https://axeon-editor.vercel.app/",
+    },
     {
       title: "Miryoku",
       description:
@@ -30,13 +41,6 @@ export const projects = [
       image:voult,
       link:"https://voult-mern-app-x2.onrender.com/",
     },
-    {
-      title: "Creative Mindset",
-      description:
-        "A sleek and modern website for a design agency built with React, Tailwind CSS, and GSAP, featuring smooth scroll-based animations, responsive layouts, and dynamic transitions that showcase the agency's services, portfolio, and team with an engaging user experience.",
-      tech: ["React", "Gsap", "Tailwind",],
-      image:cmind,
-      link:"https://creativestudios-seven.vercel.app/",
-    },
+    
     
   ];
