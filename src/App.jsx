@@ -1,25 +1,30 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
 import Services from './components/Services'
 import ContactForm from './components/Contact'
 import Footer from './components/Footer'
+import ProjectsPage from './components/ProjectsPage'
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+// Home page layout — Projects section removed, replaced by hero accordion + /projects route
+function HomePage() {
   return (
     <>
       <Header />
       <Hero />
       <Services />
-      <Projects />
       <ContactForm />
       <Footer />
     </>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+    </Routes>
   )
 }
 

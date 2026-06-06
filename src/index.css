@@ -18,8 +18,9 @@
   --font-montserrat: Montserrat, "sans-serif";
   
   --color-brand-green: #B6FF5E;
-  --color-brand-black: #0a0a0a;
-  --color-brand-gray: #f5f5f5;
+  --color-brand-black: #000000;
+  --color-brand-card: #0d0d0d;
+  --color-brand-gray: #ffffff;
 }
 
 html {
@@ -27,8 +28,8 @@ html {
 }
 
 body {
-  background-color: var(--color-brand-gray);
-  color: var(--color-brand-black);
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-gray);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,4 +37,26 @@ body {
 ::selection {
   background-color: var(--color-brand-green);
   color: black;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

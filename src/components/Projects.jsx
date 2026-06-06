@@ -47,11 +47,11 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-white" id="projects" ref={containerRef}>
+    <section className="py-24 px-4 bg-black font-montserrat" id="projects" ref={containerRef}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-aeonik mb-6">Selected Work</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto font-montserrat">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-aeonik mb-6 text-white tracking-tight">Selected Work</h2>
+          <p className="text-zinc-400 text-lg max-w-2xl mx-auto font-montserrat">
             A showcase of projects demonstrating full-stack capabilities and attention to detail.
           </p>
         </div>
@@ -61,33 +61,33 @@ const ProjectsSection = () => {
             <div
               key={index}
               ref={addToRefs}
-              className="group bg-gray-50 rounded-3xl overflow-hidden border border-gray-200 hover:border-black transition-all duration-300 hover:shadow-xl flex flex-col h-full md:static sticky top-[15vh]"
+              className="group bg-zinc-950/40 backdrop-blur-md rounded-3xl overflow-hidden border border-zinc-900 hover:border-zinc-800 hover:bg-zinc-900/10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-all duration-300 flex flex-col h-full md:static sticky top-[15vh]"
             >
               <div className="relative overflow-hidden aspect-video">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover w-full h-full transform group-hover:scale-105 filter grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300" />
               </div>
 
               <div className="p-8 flex flex-col flex-grow">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-aeonik font-bold text-gray-900">
+                <div className="flex justify-between items-center mb-4 gap-4">
+                  <h3 className="text-2xl font-aeonik font-bold text-white group-hover:text-brand-green transition-colors duration-200">
                     {project.title}
                   </h3>
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-green text-black font-semibold rounded-full text-xs hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(182,255,94,0.25)] whitespace-nowrap"
                   >
-                    Visit <Globe size={16} />
+                    Visit <Globe size={14} />
                   </a>
                 </div>
 
-                <p className="text-gray-600 mb-6 font-montserrat leading-relaxed flex-grow">
+                <p className="text-zinc-400 mb-8 font-montserrat leading-relaxed flex-grow text-sm">
                   {project.description}
                 </p>
 
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
                   {project.tech.map((techItem, i) => (
                     <span
                       key={i}
-                      className="bg-gray-200 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                      className="bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs font-medium px-3.5 py-1.5 rounded-full tracking-wide uppercase"
                     >
                       {techItem}
                     </span>
