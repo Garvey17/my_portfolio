@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Bot, Cpu, Zap, TrendingUp, Eye, CloudLightning, ArrowRight, ChevronRight } from 'lucide-react';
+import { Bot, Cpu, Database, TrendingUp, Eye, CloudLightning, ArrowRight, ChevronRight } from 'lucide-react';
 
 const services = [
   {
-    title: "Workflow Automation",
-    icon: <Zap className="w-8 h-8 text-brand-green" />,
-    description: "Design and implement autonomous background services, scheduled operations, and seamless API integrations to eliminate manual work.",
-    features: ["API Orchestration", "Data Pipeline Schedulers", "Slack & Discord Bots", "Webhook Receivers"]
+    title: "RAG Systems",
+    icon: <Database className="w-8 h-8 text-brand-green" />,
+    description: "Build production-grade Retrieval-Augmented Generation pipelines that ground LLM responses in your private knowledge base — eliminating hallucinations and delivering precise, context-aware answers at scale.",
+    features: ["Vector DB Setup (Pinecone, pgvector)", "Custom Embedding Pipelines", "Semantic Search & Reranking", "LLM-Grounded Q&A Systems"]
   },
   {
     title: "Model Finetuning",
