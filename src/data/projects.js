@@ -4,8 +4,26 @@ import voult from "../assets/voult.png"
 import miryoku from "../assets/miryoku.png"
 import afraf from "../assets/afraff.png"
 import axeon1 from "../assets/axeon1.png"
+import doc2docs from "../assets/docs2docs.png"
+import ingenious_agentic from "../assets/ingenious-agentic.png"
 
 export const projects = [
+    {
+      "title": "Docs to Docs",
+      "description": "An AI pipeline that scrapes any documentation site and converts it into a compact, downloadable Word guide covering installation, getting started, and features — delivered via a Chrome extension.",
+      "tech": ["Python", "FastAPI", "Playwright", "OpenAI", "AWS ECS", "S3", "Docker", "Chrome Extension"],
+      "image": doc2docs,
+      "link": "https://github.com/Garvey17/Ingenious-agentic"
+    },
+
+    {
+      "title": "Ingenious",
+      "description": "An autonomous, multi-agent AI system designed to research any topic, evaluate facts, and write comprehensive, publication-grade executive reports with a shared state between agents",
+      "tech": ["Python", "FastAPI", "LangGraph", "Pydantic", "Uvicorn", "Next.js", "Tailwind CSS", "Qdrant (Vector Database)", "OpenAI"],
+      "image": ingenious_agentic,
+      "link": "https://agentic-ingenious.vercel.app/"
+    },
+
     {
       title: "Axeon",
       description:
