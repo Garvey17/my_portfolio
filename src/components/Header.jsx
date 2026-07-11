@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
-import avatar from "../assets/avatar.jpg";
+import avatar from "../assets/avatar.png";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
