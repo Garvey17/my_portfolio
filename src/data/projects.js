@@ -6,8 +6,25 @@ import afraf from "../assets/afraff.png"
 import axeon1 from "../assets/axeon1.png"
 import doc2docs from "../assets/docs2docs.png"
 import ingenious_agentic from "../assets/ingenious-agentic.png"
+import nobaze from "../assets/nobaze.png"
 
 export const projects = [
+
+  {
+    
+    "title": "Nobaze — RAG Knowledge Base",
+    "description": "A production-grade RAG system that ingests documents from PDFs, URLs, and plain text, retrieves relevant chunks via hybrid semantic + BM25 search with Reciprocal Rank Fusion, and returns grounded answers with inline source citations. Includes a voice interface with streaming TTS sentence buffering for sub-second perceived latency.",
+    "tech": ["Python", "FastAPI", "OpenAI", "Pinecone", "PostgreSQL", "SQLAlchemy", "LangChain", "BM25", "Whisper", "Docker", "AWS EC2", "React", "Vite"],
+    "image": nobaze,
+    "link": "https://nobaze.vercel.app/"
+  },
+  {
+    "title": "Ingenious",
+    "description": "An autonomous, multi-agent AI system designed to research any topic, evaluate facts, and write comprehensive, publication-grade executive reports with a shared state between agents. Includes memory support with Qdrant vector database",
+    "tech": ["Python", "FastAPI", "LangGraph", "Pydantic", "Uvicorn", "Next.js", "Tailwind CSS", "Qdrant (Vector Database)", "OpenAI"],
+    "image": ingenious_agentic,
+    "link": "https://agentic-ingenious.vercel.app/"
+  },
     {
       "title": "Docs to Docs",
       "description": "An AI pipeline that scrapes any documentation site and converts it into a compact, downloadable Word guide covering installation, getting started, and features — delivered via a Chrome extension.",
@@ -16,13 +33,6 @@ export const projects = [
       "link": "https://github.com/Garvey17/Ingenious-agentic"
     },
 
-    {
-      "title": "Ingenious",
-      "description": "An autonomous, multi-agent AI system designed to research any topic, evaluate facts, and write comprehensive, publication-grade executive reports with a shared state between agents",
-      "tech": ["Python", "FastAPI", "LangGraph", "Pydantic", "Uvicorn", "Next.js", "Tailwind CSS", "Qdrant (Vector Database)", "OpenAI"],
-      "image": ingenious_agentic,
-      "link": "https://agentic-ingenious.vercel.app/"
-    },
 
     {
       title: "Axeon",
